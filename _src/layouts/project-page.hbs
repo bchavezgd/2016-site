@@ -1,0 +1,51 @@
+{{> head }}
+{{> nav }}
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-5 col-md-offset-7">
+      <h2 class="text-capitalize">{{{ title }}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <article class="col-md-7 col-xs-12 text-justify">
+    {{#markdown}}
+      {{ body }}
+    {{/markdown}}
+    </article>
+    <div id="details" class="col-md-5 col-xs-12">
+      <dl>
+      {{#each detail}}
+        <dt>{{ dt }}</dt> 
+        <dd>{{ dd }}</dd>
+      {{/each}}
+      </dl>
+    </div>
+  </div>
+</div>
+<hr/>
+<div class="container">
+  <div class="row gallery-inner">
+<!-- Each image needs to be clickable to show larger imag e -->
+  {{#each samples }}
+    <div class="col-xs-6 col-sm-4 col-md-4 gallery-item">
+      <figure>
+        <a href="#"> 
+      <img src="/images/{{ url }}" alt="{{ desc }}" href="#" class="img-responsive">
+      </a>
+      {{#if desc}}
+      <figcaption class="text-center">
+        {{ desc }} 
+        <p>-{{ imgdir}}- </p>
+      </figcaption>
+      {{/if}}
+      </figure>
+    </div>
+  {{/each}}
+  </div>
+</div>
+
+<p>{{ imgdir }}</p>
+{{> footer }}
+{{> jsHook }}
+{{> foot   }}

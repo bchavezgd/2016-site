@@ -28,12 +28,12 @@ $brand-danger:          #d9534f !default;
 
 //** Background color for `<body>`.
 //$body-bg:               #fff !default;
-$body-bg:               $brand-primary !default;
+$body-bg:               lighten($brand-primary, 20%) !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            darken($brand-primary, 40%) !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.

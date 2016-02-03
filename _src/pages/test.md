@@ -1,6 +1,8 @@
 ---
 layout: project-page.hbs
 title: test
+featuredImage: http://placehold.it/600x300
+excerpt: do not adjust your television.
 detail:
   - dt: Company
     dd: NCCPT

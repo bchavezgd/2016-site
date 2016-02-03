@@ -1,6 +1,8 @@
 ---
 layout: project-page.hbs
-title: NCCPT Training Log
+title: Training Log
+featuredImage: training-log-01.jpg
+excerpt: The previous training log sucked.
 detail:
   - dt: Company
     dd: NCCPT

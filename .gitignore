@@ -7,3 +7,5 @@
 .DS_Store
 Thumbs.db
 /_site/
+/_src/images/*.jpg
+/_src/sass/bootstrap/

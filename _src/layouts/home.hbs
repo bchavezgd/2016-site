@@ -1,0 +1,38 @@
+{{> head }} {{> nav }}
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-5 col-md-offset-7">
+      <h2 class="text-capitalize">project title</h2> {{> body}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7 col-xs-12">
+      <div class="container">
+
+
+        {{#each project}}
+        <div class="row">
+          <div class="card cf">
+            <figure class="col-md-4">
+              <img src="images/{{ data.featuredImage }}" alt="{{ data.title }}" class="img-responsive">
+            </figure>
+            <article class="col-md-8">
+              <h2>{{ data.title }}</h2> {{ data.excerpt }}
+
+            </article>
+          </div>
+        </div>
+        <!-- end row-->
+        {{/each}}
+
+
+      </div>
+    </div>
+    <div id="details" class="col-md-5 col-xs-12">
+      <!-- sidebar -->
+    </div>
+  </div>
+</div>
+
+{{> footer }} {{> jsHook }} {{> foot }}

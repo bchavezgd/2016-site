@@ -1,18 +1,9 @@
-body
-  font-size: 16px
-  color: lighten(#000, 18%)
-  font-family: "lato", "open sans", sans-serif
-
 %headers
-  font-family: "abril fatface", serif
   letter-spacing: 0.01em
-  line-height: 1.0
 
 @for $i from 1 through 6
   h#{$i}
     @extend %headers
-    font-size: (6rem * 1.61) / $i 
-
 
 @for $i from 1 through 6
   .v-padding-#{$i}
@@ -20,8 +11,8 @@ body
     padding-bottom: $i * 0.5em
 
 #details dd
-  text-indent: 1em
-  margin-bottom: 1.2em
+  text-indent: 2em
+  margin-bottom: $line-height-computed
 
 figure figcaption
   margin: 1em

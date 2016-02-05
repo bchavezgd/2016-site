@@ -6,6 +6,8 @@
     "type": "git",
     "url": "https://github.com/bchavezgd/"
   },
+  "readme": "readme.md",
+  "description": "website prototype",
   "devDependencies": {
     "autoprefixer": "^6.2.3",
     "cssnano": "^3.4.0",
@@ -17,6 +19,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.1",
     "grunt-sass": "^1.1.0",
+    "load-grunt-config": "^0.19.1",
     "load-grunt-tasks": "^3.1.0"
   },
   "removed": "imagemin-mozjpeg: ^0.1.2"

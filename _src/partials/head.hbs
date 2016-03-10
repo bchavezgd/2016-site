@@ -2,12 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8">
+    {{#if page.title }}
     <title>{{ page.title }} | {{ site.name }}</title>
+    {{#else}}
+    <title>{{ site.name }}</title>
+    {{/else}}
+    {{/if}}
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
 <!--    <link rel="stylesheet" href="css/bootstrap-theme.css">-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="/js/bootstrap.js"></script>
 </head>
 <body>

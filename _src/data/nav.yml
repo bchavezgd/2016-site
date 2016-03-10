@@ -1,0 +1,5 @@
+pages:
+ - page: index
+   filename: index.html
+ - page: works
+   filename: projects/

@@ -2,36 +2,39 @@
 <div class="container-fluid">
 
   <div class="row">
-    <div class="col-md-5 col-md-offset-7">
-      <h2 class="text-capitalize">project title</h2> {{> body}}
-    </div>
-  </div>
-  <div class="row">
     <div class="col-md-7 col-xs-12">
       <div class="container">
+{{body}}
 
-
-        {{#each project}}
-        <div class="row">
-          <div class="card cf">
-            <figure class="col-md-4">
-              <img src="images/{{ data.featuredImage }}" alt="{{ data.title }}" class="img-responsive">
-            </figure>
-            <article class="col-md-8">
-              <h2>{{ data.title }}</h2> {{ data.excerpt }}
-
-            </article>
+        {{#each page}}
+          <div class="row">
+            <div class="card clearfix">
+              <figure class="col-md-4">
+                <img src="images/{{ featuredImage }}" alt="{{ this.title }}" class="img-responsive">
+              </figure>
+              <!-- end col md 4 -->
+              <article class="col-md-6">
+                <h2>{{ title }}</h2>
+                {{ excerpt }}
+              </article>
+              <!-- end col md 8 -->
+              <div  class="details col-md-2 col-xs-2">
+                <dl>
+                {{#each detail}}
+                  <dt>{{ dt }}</dt>
+                  <dd>{{ dd }}</dd>
+                {{/each}}
+                </dl>                <!-- sidebar -->
+              </div>
+              <!-- end details col md 5 -->
+            </div>
+            <!-- end card -->
           </div>
-        </div>
-        <!-- end row-->
+          <!-- end row-->
         {{/each}}
-
-
       </div>
     </div>
-    <div id="details" class="col-md-5 col-xs-12">
-      <!-- sidebar -->
-    </div>
+
   </div>
 </div>
 

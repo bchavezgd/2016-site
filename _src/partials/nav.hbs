@@ -1,17 +1,32 @@
-      <nav class="nav navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header"><span class="navbar-brand">
-            <a href="{{ site.url }}">{{ site.name }}</a>
-           </span>
-            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-01" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          </div>
-          <div id="navbar-collapse-01" class="collapse navbar-collapse">
-            <ul aria-labelledby="dropdownMenu1" class="nav navbar-nav list-inline"> 
-            <!-- replace with an #each tag -->
-             {{#each pages}} 
-             <li> <a href="{{ filename }}" class="active">{{{ data.title }}}</a></li>
-             {{/each}}
-            </ul>
-          </div>
-        </div>
-      </nav>
+<nav class="nav navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">
+        <a href="{{ site.url }}">{{ site.name }}</a>
+       </span>
+      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-01" aria-expanded="false" class="navbar-toggle collapsed">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbar-collapse-01" class="collapse navbar-collapse">
+      <ul aria-labelledby="dropdownMenu1" class="nav navbar-nav list-inline">
+        <!-- replace with an #each tag -->
+        {{#each pages}}
+          <li>
+            <a href="{{ filename }}">{{{ data.title }}}</a>
+          </li>
+        {{/each}}
+
+        {{#each nav.pages}}
+          <li>
+            <a href="{{filename}}">{{page}}</a>
+          </li>
+        {{/each}}
+
+      </ul>
+    </div>
+  </div>
+</nav>
